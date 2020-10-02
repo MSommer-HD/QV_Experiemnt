@@ -1,0 +1,65 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{#{% block title %}#}
+Test Results
+{#{% endblock %}#}
+
+{% block content %}
+
+    <div id="main">
+
+        {% if player.s1_correct == 1 and  player.s2_correct == 1%}
+
+            <img src="{% static "correct.png" %}"; align="center">
+              <br><br><br>
+            <p> You completed the test with success.<br><br>
+                The voting experiment will start on the next page.
+            </p>
+        {% else %}
+            <p> The people in the test voted as follows:</p><br><br>
+            <img src="{% static "test.png" %}" class="image1"; align="center"> <br><br>
+
+            <img src="{% static "solution.png" %}" class="image2"; align="center">
+              <br><br><br>
+            <p> You made a mistake on the test. If still in doubt, please contact Moritz<br><br>
+                The voting experiment will start on the next page.
+            </p>
+        {% endif %}
+
+
+    </div>
+
+                <br> <br>                <br> <br>
+    {% next_button %}
+
+{% endblock %}
+
+
+{% block styles %}
+
+
+    <style type="text/css">
+
+
+
+        input{
+
+        }
+
+        .image2{
+            width:15em;
+            height:10em;
+        }
+
+
+        label {
+            float: none;
+            padding: 0 0em;
+            text-align: center;
+        }
+    </style>
+
+
+{% endblock %}
+

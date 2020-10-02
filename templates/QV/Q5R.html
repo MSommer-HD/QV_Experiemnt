@@ -1,0 +1,82 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Question 5 Results
+{% endblock %}
+
+{% block content %}
+
+
+<br><br><br><br>
+<p align="center"; style="font-size: 20px">Governments should spend less money trying to rehabilitate some criminals.</p>
+<br><br><br><br>
+<div id="main">
+    <table class="table">
+        <tr>
+            <td align="center"; colspan="1">
+                <p style="font-size: 20px;">Majority Voting</p>
+            </td>
+            <td align="center"; colspan="1">
+                <p style="font-size: 20px;">Quadratic Voting</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1">
+                {% if subsession.mv5 == 1 %}
+                    <img src="{% static "agree.png" %}" class="image1">
+                {% elif subsession.mv5 == 2 %}
+                    <img src="{% static "disagree.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutral.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv5 == 1 %}
+                    <img src="{% static "agree.png" %}" class="image1">
+                {% elif subsession.qv5 == 2 %}
+                    <img src="{% static "disagree.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutral.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+<br><br>
+
+    {% next_button %}
+{% endblock %}
+
+{% block styles %}
+
+
+    <style type="text/css">
+
+        label {
+            float: left;
+            padding: 0 0.2em;
+            text-align: center;
+        }
+
+
+        table, th, td {
+            border: 1px solid black;
+              border-collapse: collapse;
+              border-color: white;
+        }
+
+
+        .image2{
+            width:10em;
+            height:10em;
+        }
+
+        .image1{
+            width:15em;
+            height:15em;
+        }
+    </style>
+
+
+{% endblock %}

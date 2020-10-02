@@ -1,0 +1,121 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Question 16
+{% endblock %}
+
+{% block content %}
+<br><br><br><br>
+<p align="center"; style="font-size: 20px">The issues of the LGBTQI* community are not being addressed sufficiently. <br> Therefore, they should have direct representatives in the legislative bodies.  </p>
+<br><br><br><br>
+<div id="main">
+    <table class="table">
+        <tr>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;">Majority Voting</p>
+            </td>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;">Quadratic Voting</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" >
+                    <label id="label1" for="value1"><br><img src="{% static "agree.png" %}" class="image2"><br>
+                        <input type="radio" name="choice16" id="value1" value=1></label>
+            </td>
+            <td align="center" >
+                    <label id="label1" for="value1"><br><img src="{% static "neutral.png" %}" class="image2"><br>
+                        <input type="radio" name="choice16" id="value1" value=0></label>
+            </td>
+            <td align="center">
+                    <label id="label1" for="value1"><br><img src="{% static "disagree.png" %}" class="image2"><br>
+                        <input type="radio" name="choice16" id="value1" value=2></label>
+            </td>
+            <td align="center">
+                    <label id="label1" for="value1"><br><img src="{% static "agree.png" %}" class="image2"><br>
+                        <input type="radio" name="choice16qv" id="value1" value=1></label>
+            </td>
+            <td align="center" >
+                    <label id="label1" for="value1"><br><img src="{% static "neutral.png" %}" class="image2"><br>
+                        <input type="radio" name="choice16qv" id="value1" value=0></label>
+            </td>
+            <td align="center">
+                    <label id="label1" for="value1"><br><img src="{% static "disagree.png" %}" class="image2"><br>
+                        <input type="radio" name="choice16qv" id="value1" value=2></label>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;"></p>
+            </td>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;">You have {{credits}} voting credits left</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;"></p>
+            </td>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;">{% formfield player.choice16cred %}</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="3">
+                <p style="font-size: 20px;"></p>
+            </td>
+            <td align="center"; colspan="3">
+                 <img src="{% static "cost.png" %}" class="image1">
+            </td>
+        </tr>
+    </table>
+</div>
+<br><br>
+
+<br><br>
+
+
+
+
+
+
+
+    {% next_button %}
+
+{% endblock %}
+
+
+{% block styles %}
+
+
+    <style type="text/css">
+
+        image1{
+            width:20em;
+            height:15em;
+        }
+
+        label {
+            float: left;
+            padding: 0 0.2em;
+            text-align: center;
+        }
+
+
+        table, th, td {
+            border: 1px solid black;
+              border-collapse: collapse;
+              border-color: white;
+        }
+
+
+        .image2{
+            width:10em;
+            height:10em;
+        }
+
+    </style>
+
+
+{% endblock %}

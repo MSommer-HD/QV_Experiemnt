@@ -1,0 +1,439 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+<br><br>
+<p align="center"; style="font-size: 20px">Dear participant,<br>
+Thank you for taking part in this short online experiment. Bellow you can find a summary of the results:  </p>
+
+
+
+<br><br><br><br>
+<div id="main">
+    <table class="table">
+        <tr>
+            <td  align="center"; colspan="1">
+                <p style="font-size: 20px;">Question/Statement</p>
+            </td>
+            <td align="center"; colspan="1">
+                <p style="font-size: 20px;">Majority Voting</p>
+            </td>
+            <td align="center"; colspan="1">
+                <p style="font-size: 20px;">Quadratic Voting</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The EU member states should create a common military.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv1 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv1 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv1 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv1 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">Trading financial products (e.g. stocks) should be taxed.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv2 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv2 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv2 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv2 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">There should be a mandatory women's quota in the management level of big companies.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv3 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv3 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv3 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv3 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The legal voting age should be lowered to 16 years.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv4 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv4 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv4 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv4 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">Governments should spend less money trying to rehabilitate some criminals.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv5 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv5 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv5 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv5 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">In the future the EU should grow into the „United States of Europe”.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv6 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv6 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv6 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv6 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The Government should be allowed to gather and save personal Data to protect their citizens (e.g. from terrorist attacks).</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv7 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv7 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv7 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv7 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The EU should support private sea rescue missions in the Mediterranean.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv8 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv8 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv8 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv8 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">By German law, an abortion can only take place if the 13th week of pregnancy is not reached and a consultation is completed. Should those laws be relaxed?</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv9 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv9 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv9 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv9 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1">
+                <p style="font-size: 16px;">The EU is currently the world largest donor of development funds with a spending of 74,4 billion EUR in 2018. Should the EU maintain those levels of development assistance spending?</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv10 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv10 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv10 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv10 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The State should be allowed to expropriate citizens if they do not use or rent out their property in major cities.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv11 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv11 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv11 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv11 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The EU budget of 1% of the European GDP should be expanded to allow for more European projects.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv12 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv12 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv12 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv12 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">Governments should combat climate change by tougher restrictions/laws instead of just setting economic incentives.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv13 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv13 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv13 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv13 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">The EU should maintain the level of financial support for the agricultural sector.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv14 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv14 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv14 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv14 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1"><br>
+                <p style="font-size: 16px;">There should be an annual upper limit for the admission of new asylum seekers.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv15 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv15 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv15 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv15 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td align="center"; colspan="1">
+                <p style="font-size: 16px;">The issues of the LGBTQI* community are not being dealt with. Therefore, they should have direct representatives in the legislative bodies.</p>
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.mv16 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.mv16 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+            <td align="center"; colspan="1">
+                {% if subsession.qv16 == 1 %}
+                    <img src="{% static "agreer.png" %}" class="image1">
+                {% elif subsession.qv16 == 2 %}
+                    <img src="{% static "disagreer.png" %}" class="image1">
+                {% else %}
+                     <img src="{% static "neutralr.png" %}" class="image1">
+                {% endif %}
+            </td>
+        </tr>
+
+    </table>
+</div>
+<br><br>
+
+
+
+<p align="center"; style="font-size: 20px">Once again, thank you for participating.
+    <br>You may close this window now and return to the Zoom-Call.  </p>
+{% endblock %}
+
+{% block styles %}
+
+
+    <style type="text/css">
+
+        label {
+            float: left;
+            padding: 0 0.2em;
+            text-align: center;
+        }
+
+
+        table, th, td {
+            border: 1px solid black;
+              border-collapse: collapse;
+              border-color: white;
+        }
+
+
+        .image2{
+            width:10em;
+            height:10em;
+        }
+
+        .image1{
+            width:5em;
+            height:5em;
+        }
+    </style>
+
+
+{% endblock %}

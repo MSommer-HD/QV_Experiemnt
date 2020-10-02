@@ -1,0 +1,169 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+
+{% block content %}
+
+<div id="main">
+    <br><br>
+    <p style="font-size: 20px;"><u><b>What is Quadratic Voting?</b></u> </p><br>
+    <p align="justify">QV is a method for decision making that allows you not only to express how you feel about a certain topic but also allows you to express how
+    strongly you feel about it (i.e. How often you want to vote for it). <br> This solves an issue of majority voting, which assumes that everyone cares for an issue equally, which is rarely the case. The reality is that some voters do not care about certain issues, care moderately about others and care deeply about a few.</p><br>
+
+    <p style="font-size: 16px;">Why Quadratic ? </p><br>
+    <p align="justify">Each participant is given an amount of credits that can be used to vote for an issue. However, the cost of casting more than one vote for an issue is quadratic, not linear. So, the marginal cost of each additional vote is far higher than that of the previous vote.<br><br>
+
+    Here is the Quadratic Voting formula: Cost to the voter = (Number of votes)^2<br><br>
+
+    Imagine that a vote generally costs 1 credit to put toward an issue, and you have 100 voting credits. You want to cast your vote toward protecting endangered species. Casting one vote will cost you 1 credit. However, casting two votes for the same issue will cost you 4 credits, casting three votes for the same issue will cost you 9 and casting 10 votes for the same issue will cost you all of your credits.</p><br>
+    <p align="justify"><b>Further information:</b> Radical Markets: Uprooting Capitalism and Democracy for a Just Society, Posner & Weyl, Princton University Press, 2018</p><br>
+
+    <p style="font-size: 20px;"><u><b>Today's experiment</b></u></p><br>
+    <p align="justify">This experiment is meant to analyze possible differences between majority voting and quadratic voting. Therefore, you will be asked to vote on 16 different questions covering a variety of issues. First, you will be asked to cast one voter per question that will be aggregated in a “traditional” majority voting system.
+        Second, you will have the opportunity to vote in a quadratic system. Here, you can decide freely how many votes to cast per question, following the cost of voting formula introduced earlier (cost = votes^2). In this second, quadratic system you have a total of 20 credits. The voting pages will look like this:</p><br>
+
+    <img src="{% static "ex.png" %}"; class="image2"; align="center">
+    <br><br>
+    <p align="justify">After all participants voted you will see the results of the two voting mechanisms we as a group would agree on.</p><br>
+
+    <p align="justify">Below you will find the list of the Questions/Statements you will be asked to vote on. Additionally, you will find a link to a document with all the question, so you do not lose track of them during the experiment. Please make sure to open it in a different tab, otherwise this page will be closed.</p>
+    <br><br>
+
+    <a href="url"></a>
+
+    <table class="table">
+        <tr>
+            <td>
+                <p style="font-size: 16px;">Question/Statement</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">1. The EU member states should create a common military.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">2. Trading financial products (e.g. stocks) should be taxed.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">3. There should be a mandatory women's quota in the management level of big companies.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">4. The legal voting age should be lowered to 16 years.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">5. Governments should spend less money trying to rehabilitate some criminals.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">6. In the future the EU should grow into the „United States of Europe”.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">7. The Government should be allowed to gather and save personal Data to protect its citizens (e.g. from terrorist attacks).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">8. The EU should support private sea rescue missions in the Mediterranean.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">9. By German law, an abortion can only take place if the 13th week of pregnancy is not reached and a consultation is completed. Should those laws be relaxed?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">10. The EU is currently the world largest donor of development funds with a spending of 74,4 billion EUR in 2018. Should the EU maintain those levels of development assistance spending?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">11. The State should be allowed to expropriate citizens if they do not use or rent out their property in major cities.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">12. The EU budget of 1% of the European GDP should be expanded to allow for more European projects.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">13. Governments should combat climate change by tougher restrictions/laws instead of just setting economic incentives.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">14. The EU should maintain the current level of financial support for the agricultural sector.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">15. There should be an annual upper limit for the admission of new asylum seekers.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="font-size: 16px;">16. The issues of the LGBTQI* community are not being addressed sufficiently. <br> Therefore, they should have direct representatives in the legislative bodies.</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<br><br>
+
+ <p>A link to the Questions can be found  <a href="https://drive.google.com/file/d/1cKUIEmzt4Vl7S0V_nKVTtP07bzD7TVKD/view?usp=sharing">here</a>. (please open it in a new tab)</p>
+<br><br>
+<p>If you do not any further questions please enter the code provided by Moritz.</p>
+<br>
+        {% formfield player.breakpoint1 %}
+
+
+<br> <br>
+
+    {% next_button %}
+
+{% endblock %}
+
+
+{% block styles %}
+
+
+    <style type="text/css">
+
+
+        .image2{
+            width:60em;
+            height:50em;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+              border-collapse: collapse;
+              border-color: white;
+        }
+
+        label {
+            float: none;
+            padding: 0 0em;
+            text-align: center;
+        }
+    </style>
+
+
+{% endblock %}
+
